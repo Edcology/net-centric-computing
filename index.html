@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Centric Computing Assignment</title>
+    <style>
+        body {
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            height: 400px;
+        }
+        form {
+            display: grid;
+            padding: .7rem;
+            border: 1px solid black;
+            justify-self: center;
+        }
+        .labels {
+            margin-top: 20px;
+        }
+        input {
+            padding: 4px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        button {
+            width: 100px;
+            border-radius: 4px;
+            padding: 10px 0px;
+            background: #000;
+            color: #fff;
+            border: none;
+            justify-self: right;
+            margin-top: 15px;
+            margin-left: 8rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkgray;
+        }
+        input {
+            width: 250px;
+        }
+        .text {
+            display: none;
+        }
+        .show {
+            display: block;
+            color: green;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Net Centric Computing Assignment</h1>
+    <form >
+        <label class="labels" for="">Full Name:
+            <input type="text" placeholder="Enter your full name">
+        </label>
+        <label class="labels" for="">Matric No:
+            <input type="number" name="matric" id="matric" placeholder="Enter your matriculation number">
+        </label>
+        <label class="labels" for="">Department:
+            <input type="text" placeholder="Enter your department">
+        </label>
+        <p class="text">Successfully submitted</p>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <script>
+        const btn = document.querySelector("button")
+        const txt = document.querySelector(".text")
+        const success = document.querySelector("#success")
+        btn.addEventListener("click", (e) => {
+            e.preventDefault()
+            btn.textContent = "Submitted"
+            txt.className = "show"
+        })
+    </script>
+</body>
+</html>
