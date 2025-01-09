@@ -59,13 +59,13 @@
     <h1>Net Centric Computing Assignment</h1>
     <form >
         <label class="labels" for="">Full Name:
-            <input type="text" placeholder="Enter your full name">
+            <input type="text" placeholder="Enter your full name" required>
         </label>
         <label class="labels" for="">Matric No:
-            <input type="number" name="matric" id="matric" placeholder="Enter your matriculation number">
+            <input type="number" name="matric" id="matric" placeholder="Enter your matriculation number" required>
         </label>
         <label class="labels" for="">Department:
-            <input type="text" placeholder="Enter your department">
+            <input type="text" placeholder="Enter your department" required>
         </label>
         <p class="text">Successfully submitted</p>
         <button type="submit">Submit</button>
@@ -75,7 +75,6 @@
     <script>
         const btn = document.querySelector("button")
         const txt = document.querySelector(".text")
-        const success = document.querySelector("#success")
         btn.addEventListener("click", (e) => {
             e.preventDefault()
             btn.textContent = "Submitted"
